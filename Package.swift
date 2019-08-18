@@ -15,9 +15,15 @@ let package = Package(
     targets: [
         .target(
             name: "MainLib",
-            dependencies: ["Extensions"]),
+            dependencies: ["GlobalOperator", "StaticPrefixOperator", "StaticOperator"]),
         .target(
-            name: "Extensions",
+            name: "GlobalOperator",
+            dependencies: []),
+        .target(
+            name: "StaticPrefixOperator",
+            dependencies: []),
+        .target(
+            name: "StaticOperator",
             dependencies: [])
     ]
 )
